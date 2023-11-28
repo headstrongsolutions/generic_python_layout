@@ -1,0 +1,28 @@
+{
+    "python.defaultInterpreterPath": "./venv/python",
+    "python.terminal.aciveEnvironment": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnSave": true,
+    "editor.codeActionOnSave": {
+        "source.organizeImports": false
+    },
+    "editor.rulers": [
+        {
+            "column": 70,
+            "color": "#ff00ff22"
+        },
+        {
+            "column": 79,
+            "color": "#ff000033"
+        }
+    ],
+    "python.analysis.typeCheckingMode": "strict",
+    "files.exclude": {
+        "**/*.pyc": true
+    },
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false
+}

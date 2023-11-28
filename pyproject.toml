@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "generic_python_layout"
+version = "0.0.1"
+authors = [
+  { name="Chris Morse", email="chris@headstrong.solutions" },
+]
+description = "A generic layout for a Python project"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+    ".", 
+    "src",
+]
+
+[tool.pylint]
+max-line-length = 88
+disable = [
+    "C0103", # (invalid-name)
+    "C0114", # (missing-module-docstring)
+    "C0115", # (missing-class-docstring)
+    "C0116", # (missing-function-docstring)
+    "R0903", # (too-few-public-methods)
+    "R0913", # (too-many-arguments)
+    "W0105", # (pointless-string-statement)
+]
+
+[tool.coverage.run]
+source = [
+    "src",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pylint ~=3.0.0",
+    "build ~=1.0.3",
+    "pytest ~=6.4.3"
+]
+test = [
+    "pytest ~=6.4.3",
+    "pytes-cov ~=3.0.0"
+]
